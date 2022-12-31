@@ -5,7 +5,7 @@ let test_case = [
 
 let cur_idx = -1;
 
-function area_update(e) {
+function section1_update(e) {
 	output_textarea.value = "";
 	let input_value = input_textarea.value;
 
