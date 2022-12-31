@@ -53,7 +53,7 @@ function section1_update(e) {
 function macro_input(index) {
 	cur_idx = parseInt(index);
 	input_textarea.value = test_case[parseInt(index)];
-	area_update();
+	section1_update();
 }
 
 function select_changed(e) {
