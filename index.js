@@ -72,6 +72,6 @@ for (let i = 0; i < test_case.length; i++) {
 	let tempo = test_case[i].split(" ");
 	let option_el = document.createElement("option");
 	option_el.value = i;
-	option_el.innerText = `${tempo[0]} ${tempo[1]} ${tempo[2]}`;
+	option_el.innerText = `${tempo[0]} ${tempo[1]}`;
 	auto_input_select.appendChild(option_el);
 }
