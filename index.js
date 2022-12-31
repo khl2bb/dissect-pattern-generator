@@ -1,5 +1,6 @@
 let test_case = [
 	`time="2022-12-31 08:17:36" machine_name=Eek_293_O event_name=Denied by User ODO Blist src_ip=12.12.23.12 src_port=32002 dst_ip=102.142.135.251 dst_port=1423 protocol=6 ingres_if=External input_interface=enn112"`,
+	`a=1 b=2`,
 ];
 
 let cur_idx = -1;
