@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dissect Pattern Generator</title>
+	</head>
+	<body>
+		<div>
+			<div class="header">
+				<h1>Dissect Pattern Generator</h1>
+				<div class="btn_area">
+					<div style="max-width: 400px">
+						<select id="auto_input_select" onchange="select_changed(event)">
+							<option value="0">-테스트 케이스 선택-</option>
+						</select>
+					</div>
+					<div>
+						<button class="btn" id="auto_input_btn" onclick="auto_input()">
+							예시 입력
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="section">
+					<h2>패턴 생성</h2>
+					<div class="content_area">
+						<div class="text_area">
+							<h3>로그 body나 일부를 입력하세요.</h3>
+							<textarea
+								id="input_textarea"
+								onkeyup="area_update(event)"
+							></textarea>
+						</div>
+						<div>
+							<h3>생성된 Dissect Mapping Pattern</h3>
+							<textarea id="output_textarea" disabled></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<h2>로그 분석</h2>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js"></script>
+</html>
+
+<style>
+	#auto_input_btn {
+		width: 100px;
+	}
+	#auto_input_select {
+		padding: 5px;
+		font-size: 20px;
+		cursor: pointer;
+		border: 0;
+		max-width: 100%;
+	}
+	#auto_input_select:focus {
+		outline: 0;
+	}
+	body {
+		margin: 0;
+	}
+	h1 {
+		margin: 0;
+		margin-left: 20px;
+	}
+	h2 {
+		margin: 0;
+		margin-left: 40px;
+		margin-top: 20px;
+	}
+	.header {
+		width: 100%;
+		display: flex;
+		height: 20%;
+		padding: 10px;
+		background: rgb(34, 193, 195);
+		background: linear-gradient(
+			0deg,
+			rgba(34, 193, 195, 1) 0%,
+			rgba(253, 187, 45, 1) 100%
+		);
+		/* padding: 10px; */
+		/* box-sizing: border-box; */
+	}
+	button {
+		border: 0;
+		border-radius: 10px;
+	}
+	.btn {
+		width: 60px;
+		height: 40px;
+		font-size: 20px;
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+	.btn_area {
+		padding: 10px;
+		display: flex;
+		max-width: 30%;
+	}
+	#btn_target {
+		/* position: fixed; */
+		margin-left: 40%;
+	}
+	#btn_unit {
+		/* position: fixed; */
+		margin-left: 50%;
+	}
+	.content_area {
+		padding: 20px;
+		padding-top: 0px;
+		display: flex;
+	}
+	option {
+		/* cursor: pointer; */
+		text-align: center;
+	}
+	textarea {
+		width: 45vw;
+		height: 65vh;
+		padding: 10px;
+		font-size: 25px;
+	}
+	.text_area {
+		margin-right: 50px;
+		margin-left: 30px;
+	}
+</style>
