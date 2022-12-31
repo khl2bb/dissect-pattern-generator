@@ -5,7 +5,7 @@ let test_case = [
 
 let cur_idx = -1;
 
-function section1_update(e) {
+function section1_update() {
 	output_textarea.value = "";
 	let input_value = input_textarea.value;
 
@@ -31,7 +31,6 @@ function section1_update(e) {
 			valList.push(preVal);
 		}
 	}
-	console.log(Object.entries(splitList));
 
 	let dissectPattern = "";
 	for (const [idx, key] of Object.entries(keyList)) {
@@ -50,10 +49,36 @@ function section1_update(e) {
 	output_textarea.value = resultString;
 }
 
+function section2_update() {
+	output_textarea2.value = "11";
+	let input_value2 = input_textarea.value;
+	let inputSplit = input_value2.split(" ");
+	for (const [idx, val] of Object.entries(inputSplit)) {
+		if (idx == inputSplit.length - 1) {
+			let spanEl = document.createElement("span");
+			spanEl.innerText = val;
+			output_textarea2.appendChild(spanEl);
+		} else {
+			let spanEl = document.createElement("span");
+			spanEl.innerText = val;
+			output_textarea2.appendChild(spanEl);
+
+			let spaceEl = document.createElement("span");
+			spaceEl.style.backgroundColor = "red";
+			spaceEl.style.paddingLeft = "5px";
+			spaceEl.style.boxSizing = "border-box";
+			spaceEl.style.border = "1px solid black";
+			output_textarea2.appendChild(spaceEl);
+		}
+	}
+}
+
 function macro_input(index) {
 	cur_idx = parseInt(index);
 	input_textarea.value = test_case[parseInt(index)];
+	input_textarea2.value = test_case[parseInt(index)];
 	section1_update();
+	section2_update();
 }
 
 function select_changed(e) {

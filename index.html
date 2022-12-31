@@ -36,23 +36,20 @@
 						</div>
 						<div>
 							<h3>생성된 Dissect Mapping Pattern</h3>
-							<textarea id="section1_output_textarea" disabled></textarea>
+							<textarea id="output_textarea" disabled></textarea>
 						</div>
 					</div>
 				</div>
 				<div id="section2" class="section">
-					<h2>로그 분석</h2>
-					<div class="content_area">
+					<h2>로그 공백 분석</h2>
+					<div class="content_area2">
 						<div class="text_area">
 							<h3>로그 body나 일부를 입력하세요.</h3>
 							<textarea
 								id="input_textarea2"
-								onkeyup="area_update(event)"
+								onkeyup="section2_update(event)"
 							></textarea>
-						</div>
-						<div>
-							<h3>로그 이상 탐지</h3>
-							<textarea id="section2_output_textarea" disabled></textarea>
+							<div id="output_textarea2"></div>
 						</div>
 					</div>
 				</div>
@@ -83,6 +80,7 @@
 	h1 {
 		margin: 0;
 		margin-left: 20px;
+		padding-top: 5px;
 	}
 	h2 {
 		margin: 0;
@@ -132,18 +130,25 @@
 		padding-top: 0px;
 		display: flex;
 	}
+	.content_area2 {
+		padding: 20px;
+		padding-top: 0px;
+	}
 	option {
 		/* cursor: pointer; */
 		font-size: 22px;
 	}
 	textarea {
-		width: 45vw;
-		height: 65vh;
+		width: 40vw;
+		height: 55vh;
 		padding: 10px;
 		font-size: 25px;
 	}
 	.text_area {
 		margin-right: 50px;
 		margin-left: 30px;
+	}
+	#input_textarea2 {
+		height: 250px;
 	}
 </style>
