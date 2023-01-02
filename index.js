@@ -51,8 +51,9 @@ function section1_update() {
 }
 
 function section2_update() {
-	output_textarea2.value = "11";
-	let input_value2 = input_textarea.value;
+	output_textarea2.value = "";
+	output_textarea2.innerHTML = ''
+	let input_value2 = input_textarea2.value;
 	let inputSplit = input_value2.split(" ");
 	for (const [idx, val] of Object.entries(inputSplit)) {
 		if (idx == inputSplit.length - 1) {
